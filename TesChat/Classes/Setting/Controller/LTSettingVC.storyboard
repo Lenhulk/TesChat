@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8vu-Y6-RBY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SettingVC-->
+        <scene sceneID="5Jr-Ap-Lx3">
+            <objects>
+                <tableViewController id="8vu-Y6-RBY" customClass="LTSettingVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ks0-Za-vRp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Egv-lO-ddc">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="eBk-wo-wSO">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eBk-wo-wSO" id="X6c-7c-jEZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokebal.net" translatesAutoresizingMaskIntoConstraints="NO" id="XNJ-JM-XdR">
+                                                    <rect key="frame" x="18" y="14.5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Uks-Tc-xcl"/>
+                                                        <constraint firstAttribute="height" constant="50" id="heO-74-XcQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfj-h4-cVD">
+                                                    <rect key="frame" x="83" y="43" width="274" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XNJ-JM-XdR" firstAttribute="leading" secondItem="X6c-7c-jEZ" secondAttribute="leadingMargin" constant="10" id="2ov-PN-EGc"/>
+                                                <constraint firstItem="zfj-h4-cVD" firstAttribute="bottom" secondItem="XNJ-JM-XdR" secondAttribute="bottom" id="GTA-Ur-uUb"/>
+                                                <constraint firstItem="zfj-h4-cVD" firstAttribute="leading" secondItem="XNJ-JM-XdR" secondAttribute="trailing" constant="15" id="R7l-ja-JYU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zfj-h4-cVD" secondAttribute="trailing" constant="10" id="Yt5-qq-s4f"/>
+                                                <constraint firstItem="XNJ-JM-XdR" firstAttribute="centerY" secondItem="X6c-7c-jEZ" secondAttribute="centerY" id="vi5-nJ-iC5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="LdM-6V-Xei">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QXB-WF-CLe">
+                                        <rect key="frame" x="0.0" y="151" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QXB-WF-CLe" id="nia-PX-EsY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOR-T2-AF4">
+                                                    <rect key="frame" x="20" y="6" width="335" height="30"/>
+                                                    <state key="normal" title="退出"/>
+                                                    <connections>
+                                                        <action selector="logoutAction:" destination="8vu-Y6-RBY" eventType="touchUpInside" id="iyY-A1-5bP"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nOR-T2-AF4" firstAttribute="centerY" secondItem="nia-PX-EsY" secondAttribute="centerY" id="81j-2l-GyB"/>
+                                                <constraint firstAttribute="trailing" secondItem="nOR-T2-AF4" secondAttribute="trailing" constant="20" id="blm-PL-fOa"/>
+                                                <constraint firstItem="nOR-T2-AF4" firstAttribute="centerX" secondItem="nia-PX-EsY" secondAttribute="centerX" id="d37-6K-MWv"/>
+                                                <constraint firstItem="nOR-T2-AF4" firstAttribute="leading" secondItem="nia-PX-EsY" secondAttribute="leading" constant="20" id="mPj-4a-Fif"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="8vu-Y6-RBY" id="fJN-jg-Nu7"/>
+                            <outlet property="delegate" destination="8vu-Y6-RBY" id="qeT-wL-7Xw"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="userIDLabel" destination="zfj-h4-cVD" id="mo0-bh-G7r"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DeV-fh-sEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44" y="-104.7976011994003"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pokebal.net" width="64" height="64"/>
+    </resources>
+</document>
